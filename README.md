@@ -1,4 +1,4 @@
-# Example for using the codefresh-run plugin to call other pipelines.
+## Example for using the codefresh-run plugin to call other pipelines.
 
 This is an example application for the Codefresh CI/CD platform that contains a parent pipeline that calls two other pipelines (QA or production deployment) according to the branch name.
 
