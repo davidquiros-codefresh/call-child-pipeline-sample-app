@@ -7,7 +7,7 @@ steps:
   main_clone:
     title: 'Cloning main repository...'
     type: git-clone
-    repo: '${{CF_REPO_OWNER}}/${{CF_REPO_NAME}}'
+    repo: 'davidquiros-codefresh/call-child-pipeline-sample-app'
     revision: '${{CF_REVISION}}'
     git: github
     stage: prepare
@@ -30,7 +30,7 @@ steps:
     stage: deploy
     type: codefresh-run
     arguments:
-      PIPELINE_ID: child-pipelines/qa-pipeline
+      PIPELINE_ID: Call-Child-Pipelines/child-pipelines-qa
       VARIABLE:
         - CF_BRANCH=${{CF_BRANCH}}
         - CF_REVISION=${{CF_REVISION}}
@@ -44,7 +44,7 @@ steps:
     stage: deploy
     type: codefresh-run
     arguments:
-      PIPELINE_ID: child-pipelines/prod-pipeline
+      PIPELINE_ID: Call-Child-Pipelines/child-pipelines-prod
       VARIABLE:
         - CF_BRANCH=${{CF_BRANCH}}
         - CF_REVISION=${{CF_REVISION}}
