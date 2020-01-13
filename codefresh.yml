@@ -31,7 +31,7 @@ steps:
     type: codefresh-run
     arguments:
       PIPELINE_ID: 5e1cc9b06e1ebe2d5dd385ed
-      TRIGGER_ID: davidquiros-codefresh/call-child-pipeline-sample-app
+      TRIGGER_ID: call-child-pipeline-sample-app
       VARIABLE:
         - CF_BRANCH=${{CF_BRANCH}}
         - CF_REVISION=${{CF_REVISION}}
@@ -46,7 +46,7 @@ steps:
     type: codefresh-run
     arguments:
       PIPELINE_ID: 5e1ccb466baea5ad3dde8693
-      TRIGGER_ID: davidquiros-codefresh/call-child-pipeline-sample-app
+      TRIGGER_ID: call-child-pipeline-sample-app
         - CF_BRANCH=${{CF_BRANCH}}
         - CF_REVISION=${{CF_REVISION}}
         - APP_VERSION=${{PACKAGE_VERSION}}
