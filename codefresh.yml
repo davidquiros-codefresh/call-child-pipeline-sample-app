@@ -32,7 +32,8 @@ steps:
     arguments:
       PIPELINE_ID: call-child-pipelines/child-pipeline-qa
       TRIGGER_ID: call-child-pipeline-sample-app
-      BRANCH: master
+      BRANCH: ${{CF_BRANCH}}
+      SHA: ${{CF_REVISION}}
       CONTEXT:
       - github
       VARIABLE:
@@ -55,7 +56,8 @@ steps:
     arguments:
       PIPELINE_ID: call-child-pipelines/child-pipeline-prod
       TRIGGER_ID: call-child-pipeline-sample-app
-      BRANCH: master
+      BRANCH: ${{CF_BRANCH}}
+      SHA: ${{CF_REVISION}}
       CONTEXT:
       - github
       VARIABLE:
