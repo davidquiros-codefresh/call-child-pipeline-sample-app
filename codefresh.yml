@@ -30,7 +30,7 @@ steps:
     stage: deploy
     type: codefresh-run
     arguments:
-      PIPELINE_ID: call-child-pipelines/child-pipeline-parent
+      PIPELINE_ID: call-child-pipelines/child-pipeline-qa
       TRIGGER_ID: call-child-pipeline-sample-app
       BRANCH: master
       VARIABLE:
@@ -46,7 +46,7 @@ steps:
     stage: deploy
     type: codefresh-run
     arguments:
-      PIPELINE_ID: call-child-pipelines/child-pipeline-qa
+      PIPELINE_ID: call-child-pipelines/child-pipeline-prod
       TRIGGER_ID: call-child-pipeline-sample-app
       BRANCH: master
       VARIABLE:
