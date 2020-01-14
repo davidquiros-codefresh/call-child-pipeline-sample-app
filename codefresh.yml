@@ -32,6 +32,7 @@ steps:
     arguments:
       PIPELINE_ID: call-child-pipelines/child-pipeline-parent
       TRIGGER_ID: call-child-pipeline-sample-app
+      BRANCH: master
       VARIABLE:
         - CF_BRANCH=${{CF_BRANCH}}
         - CF_REVISION=${{CF_REVISION}}
@@ -47,6 +48,7 @@ steps:
     arguments:
       PIPELINE_ID: call-child-pipelines/child-pipeline-qa
       TRIGGER_ID: call-child-pipeline-sample-app
+      BRANCH: master
       VARIABLE:
         - CF_BRANCH=${{CF_BRANCH}}
         - CF_REVISION=${{CF_REVISION}}
