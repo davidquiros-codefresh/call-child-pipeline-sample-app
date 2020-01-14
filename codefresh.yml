@@ -47,6 +47,7 @@ steps:
     arguments:
       PIPELINE_ID: call-child-pipelines/child-pipeline-qa
       TRIGGER_ID: call-child-pipeline-sample-app
+      VARIABLE:
         - CF_BRANCH=${{CF_BRANCH}}
         - CF_REVISION=${{CF_REVISION}}
         - APP_VERSION=${{PACKAGE_VERSION}}
