@@ -34,9 +34,14 @@ steps:
       TRIGGER_ID: call-child-pipeline-sample-app
       BRANCH: master
       VARIABLE:
-        - CF_BRANCH=${{CF_BRANCH}}
-        - CF_REVISION=${{CF_REVISION}}
-        - APP_VERSION=${{PACKAGE_VERSION}}
+#        - CF_BRANCH=${{CF_BRANCH}}
+#        - CF_REVISION=${{CF_REVISION}}
+#        - APP_VERSION=${{PACKAGE_VERSION}}
+        - 'CF_BRANCH=${{CF_BRANCH}}'
+        - 'CF_REVISION=${{CF_REVISION}}'
+        - 'CF_REPO_NAME=${{CF_REPO_NAME}}'
+        - 'CF_REPO_OWNER=${{CF_REPO_OWNER}}'
+        
     when:
       branch:
         only:
@@ -50,9 +55,13 @@ steps:
       TRIGGER_ID: call-child-pipeline-sample-app
       BRANCH: master
       VARIABLE:
-        - CF_BRANCH=${{CF_BRANCH}}
-        - CF_REVISION=${{CF_REVISION}}
-        - APP_VERSION=${{PACKAGE_VERSION}}
+#        - CF_BRANCH=${{CF_BRANCH}}
+#        - CF_REVISION=${{CF_REVISION}}
+#        - APP_VERSION=${{PACKAGE_VERSION}}
+        - 'CF_BRANCH=${{CF_BRANCH}}'
+        - 'CF_REVISION=${{CF_REVISION}}'
+        - 'CF_REPO_NAME=${{CF_REPO_NAME}}'
+        - 'CF_REPO_OWNER=${{CF_REPO_OWNER}}'
     when:
       branch:
         only:
